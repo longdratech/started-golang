@@ -1,9 +1,12 @@
 package main
 
 import (
-	"gihub.com/longth97/gomod/models"
+	"net/http"
+
+	"gihub.com/longth97/gomod/controllers"
 )
 
 func main() {
-	u := models.User
+	controllers.RegisterControllers()
+	http.ListenAndServe(":3000", nil)
 }
